@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="dashboard">
+
+    <div class="dashboard-header">
+
+        <h1>
+            School Management System
+        </h1>
+
+        <p>
+            Welcome to Admin Dashboard
+        </p>
+
+    </div>
+
+    <div class="dashboard-cards">
+
+        <div class="dashboard-card">
+
+            <h2>
+                Students
+            </h2>
+
+            <p>
+                Add, edit and delete students.
+            </p>
+
+            <a asp-controller="Students"
+               asp-action="Index"
+               class="dashboard-btn">
+                Manage Students
+            </a>
+
+        </div>
+
+        <div class="dashboard-card">
+
+            <h2>
+                Teachers
+            </h2>
+
+            <p>
+                Add, edit and delete teachers.
+            </p>
+
+            <a asp-controller="Teachers"
+               asp-action="Index"
+               class="dashboard-btn">
+                Manage Teachers
+            </a>
+
+        </div>
+
+        <div class="dashboard-card">
+
+            <h2>
+                Account
+            </h2>
+
+            <p>
+                Logout from admin account.
+            </p>
+
+            <a asp-controller="Account"
+               asp-action="Logout"
+               class="dashboard-btn">
+                Logout
+            </a>
+
+        </div>
+
+    </div>
+
+</div>

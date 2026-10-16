@@ -1,0 +1,48 @@
+﻿@model School_Management_System.Models.Teacher
+
+@{
+    ViewData["Title"] = "Delete Teacher";
+}
+
+<div class="delete-card">
+
+    <h1>Delete Teacher</h1>
+
+    <p>
+        Are you sure you want to delete this teacher?
+    </p>
+
+    <div class="delete-info">
+
+        <p>
+            <b>Name:</b> @Model.Name
+        </p>
+
+        <p>
+            <b>Email:</b> @Model.Email
+        </p>
+
+        <p>
+            <b>Subject:</b> @Model.Subject
+        </p>
+
+    </div>
+
+    <form asp-action="Delete" method="post">
+
+        <input type="hidden"
+               asp-for="Id" />
+
+        <button type="submit"
+                class="btn-delete">
+            Delete
+        </button>
+
+        <a asp-action="Index"
+           class="btn-secondary">
+            Cancel
+        </a>
+
+    </form>
+
+</div>
